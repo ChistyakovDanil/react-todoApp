@@ -9,7 +9,7 @@ function App() {
   const [todos, setTodos] = useState([]);
 
   const addTodoHandler = (text) => {
-    if (text.match(/^[ ]+$/)) {
+    if (!text.trim()) {
       text = '';
     } else {
       const newTodo = {
